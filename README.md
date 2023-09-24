@@ -2,7 +2,7 @@
 
 The objective of this project is to learn basic and fundamental of Angular.
 
-## Chapter 1 - Introduction
+## Introduction
 
 Angular is an open-source web application framework designed to simplify the process of building dynamic, single-page web applications (SPAs) and complex user interfaces.
 
@@ -10,9 +10,11 @@ SPA stands for "Single Page Application." It is a web application or website tha
 
 ### Key features and concepts of Angular include:
 
+![alt text](https://github.com/adrian95c/learn-angular-bf0904/src/assets/images/angular-structure.jpg)
+
 1. Component-Based Architecture: 
 
-   Angular applications are built using a component-based architecture. 
+   Angular applications are built using a component-based architecture.
    Components are self-contained, reusable building blocks that encapsulate the structure, behavior, and appearance of a part of the user interface.
 
 2. Directives: 
@@ -78,6 +80,3 @@ Here are the key differences between Angular and AngularJS:
    It uses a virtual DOM and offers better change detection mechanisms, making updates to the UI more efficient.
 
    **AngularJS**'s two-way data binding could sometimes lead to performance issues, especially in complex applications, as it had to watch for changes in the entire scope.
-
-
-## Chapter 2 - Basic
