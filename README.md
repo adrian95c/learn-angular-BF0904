@@ -10,7 +10,7 @@ SPA stands for "Single Page Application." It is a web application or website tha
 
 ### Key features and concepts of Angular include:
 
-![alt text](https://github.com/adrian95c/learn-angular-bf0904/src/assets/images/angular-structure.jpg)
+![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/src/assets/images/angular-structure.jpg)
 
 1. Component-Based Architecture: 
 
@@ -80,3 +80,12 @@ Here are the key differences between Angular and AngularJS:
    It uses a virtual DOM and offers better change detection mechanisms, making updates to the UI more efficient.
 
    **AngularJS**'s two-way data binding could sometimes lead to performance issues, especially in complex applications, as it had to watch for changes in the entire scope.
+
+## Basic
+
+### Data Binding
+
+![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/src/assets/images/data-binding.jpg)
+
+
+
