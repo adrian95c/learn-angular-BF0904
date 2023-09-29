@@ -5,5 +5,11 @@ import { Component } from "@angular/core"; // It allows to access core functions
     templateUrl: './server.component.html'
 })
 export class ServerComponent {
+    serverId: number = 10;
+    serverStatus: string = 'online';
+    lesson: string = 'string interpolation';
 
+    getLesson(){
+        return this.lesson;
+    }
 }
