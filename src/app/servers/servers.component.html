@@ -1,5 +1,12 @@
 <h6>Nesting Components</h6>
+<app-server></app-server>
+<app-server></app-server>
+
+<hr/>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click) ="onCreateServer()">Add Server</button>
 <p>{{ serverCreationStatus }}</p>
-<app-server></app-server>
-<app-server></app-server>
+
+<hr/>
+<!--$event represent data immediate with the event, any event firing will passing the data-->
+<input type="text" class="form-control" (input)="onUpdateServerName($event)"/>
+<p>{{ serverName }}</p>
