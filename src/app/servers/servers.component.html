@@ -3,10 +3,18 @@
 <app-server></app-server>
 
 <hr/>
+<h6>String Interpolation & Property Binding</h6>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click) ="onCreateServer()">Add Server</button>
 <p>{{ serverCreationStatus }}</p>
 
 <hr/>
+<h6>Event Binding</h6>
 <!--$event represent data immediate with the event, any event firing will passing the data-->
 <input type="text" class="form-control" (input)="onUpdateServerName($event)"/>
+<p>{{ serverName }}</p>
+
+<hr/>
+<h6>Both-Way Binding</h6>
+<!--$event represent data immediate with the event, any event firing will passing the data-->
+<input type="text" class="form-control" [(ngModel)]="serverName"/>
 <p>{{ serverName }}</p>
