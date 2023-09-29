@@ -87,5 +87,7 @@ Here are the key differences between Angular and AngularJS:
 
 ![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/src/assets/images/data-binding.jpg)
 
+String Interpolation : It is used to just display a piece of data in HTML, such as displaying a title or a name.
 
+Property Binding :It bind a property of a DOM object, for example the hidden, innertext, setAttribute, replaceChild property (etc.), to some data value.
 
