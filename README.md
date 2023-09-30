@@ -93,6 +93,8 @@ Here are the key differences between Angular and AngularJS:
 
 **Event Binding**: It listens for and responds to user actions such as keystrokes, mouse movements, clicks, and touches.
 
+**Two-Way Binding**: It listens for events and update values simultaneously between parent and child components.
+
 ### Directives
 
 ![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/src/assets/images/directives.jpg)
