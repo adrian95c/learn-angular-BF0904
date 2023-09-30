@@ -2,7 +2,12 @@ import { Component } from "@angular/core"; // It allows to access core functions
 
 @Component({
     selector:'app-server',
-    templateUrl: './server.component.html'
+    templateUrl: './server.component.html',
+    styles:[ `
+        .online {
+            font-weight: bold;
+        }
+    `]
 })
 export class ServerComponent {
     serverId: number = 10;
