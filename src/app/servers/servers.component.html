@@ -3,9 +3,13 @@
 <app-server></app-server>
 
 <hr/>
-<h6>String Interpolation & Property Binding & ngIf</h6>
+<h6>String Interpolation & Property Binding & ngIf with else</h6>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click) ="onCreateServer()">Add Server</button>
-<p *ngIf="isServerCreated">Server was created. Status is: {{ serverCreationStatus }}</p>
+<p *ngIf="isServerCreated; else noServer">Server was created. Status is: {{ serverCreationStatus }}</p>
+
+<ng-template #noServer>
+    <p>No server was created. Status is: {{ serverCreationStatus }}</p>
+</ng-template>
 
 <hr/>
 <h6>Event Binding</h6>
