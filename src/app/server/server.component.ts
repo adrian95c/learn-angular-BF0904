@@ -6,10 +6,17 @@ import { Component } from "@angular/core"; // It allows to access core functions
 })
 export class ServerComponent {
     serverId: number = 10;
-    serverStatus: string = 'online';
-    lesson: string = 'string interpolation';
+    serverStatus: string = 'unknown';
 
-    getLesson(){
-        return this.lesson;
+    constructor(){
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
+
+    getServerStatus(){
+        return this.serverStatus;
+    }
+
+    getColour(){
+        return this.serverStatus === 'online' ? 'green' : 'red';
     }
 }

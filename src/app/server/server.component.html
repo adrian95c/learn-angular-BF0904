@@ -1,1 +1,4 @@
-<p>The server with ID {{ serverId }} is {{ serverStatus }} to learn {{ getLesson() }}.</p>
+<p>
+    <span>The server with ID {{ serverId }} is </span>
+    <span [ngStyle]="{color: getColour()}">{{ getServerStatus() }}.</span>
+</p>
