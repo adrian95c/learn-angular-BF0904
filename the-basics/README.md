@@ -2,7 +2,7 @@
 
 ### Data Binding
 
-![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/the-basics/src/assets/images/data-binding.jpg)
+![alt text](https://github.com/adrian95c/learn-angular-bf0904/blob/main/the-basics/src/assets/images/data-binding.jpg)
 
 **String Interpolation**: It is used to just display a piece of data in HTML, such as displaying a title or a name.
 
@@ -14,4 +14,4 @@
 
 ### Directives
 
-![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/the-basics/src/assets/images/directives.jpg)
+![alt text](https://github.com/adrian95c/learn-angular-bf0904/blob/main/the-basics/src/assets/images/directives.jpg)
