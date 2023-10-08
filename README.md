@@ -8,9 +8,37 @@ Angular is an open-source web application framework designed to simplify the pro
 
 SPA stands for "Single Page Application." It is a web application or website that loads and interacts with the user by dynamically rewriting the current web page, rather than loading entire new pages from the server. In SPAs, the initial HTML, CSS, and JavaScript resources are loaded once at the beginning of the user's session, and subsequent interactions or data retrieval are handled through AJAX (Asynchronous JavaScript and XML) requests or other technologies, without requiring a full page refresh.
 
+### Difference Between Angular and Angular JS
+
+Angular and AngularJS are both web application development frameworks, but they are significantly different in terms of architecture, features, and the technologies they are based on. 
+Here are the key differences between Angular and AngularJS:
+
+1. Architecture:
+
+   **Angular** (commonly referred to as "Angular 2+" or just "Angular") is a complete rewrite of AngularJS. 
+   It uses a component-based architecture, where an application is built by composing reusable components. 
+   Components are the core building blocks, and they encapsulate the HTML, CSS, and behavior of a part of the user interface.
+ 
+   **AngularJS** (commonly referred to as "Angular 1") uses a controller-based architecture. 
+   It relies on controllers and directives to define the structure and behavior of an application.
+
+2. Language:
+
+   **Angular** is primarily written in TypeScript, a statically typed superset of JavaScript. 
+   TypeScript provides strong typing, improved tooling, and helps catch errors at compile time.
+
+   **AngularJS** uses JavaScript for development, without the benefit of TypeScript's static typing.
+
+3. Performance:
+
+   **Angular** is known for its improved performance compared to AngularJS. 
+   It uses a virtual DOM and offers better change detection mechanisms, making updates to the UI more efficient.
+
+   **AngularJS**'s two-way data binding could sometimes lead to performance issues, especially in complex applications, as it had to watch for changes in the entire scope.
+
 ### Key features and concepts of Angular include:
 
-![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/src/assets/images/angular-structure.jpg)
+![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/the-basics/src/assets/images/angular-structure.jpg)
 
 1. Component-Based Architecture: 
 
@@ -51,50 +79,3 @@ SPA stands for "Single Page Application." It is a web application or website tha
 10. Optimization & NgModules <TBU>
 11. Deployment <TBU>
 12. Animations & Testing <TBU>
-
-
-### Difference Between Angular and Angular JS
-
-Angular and AngularJS are both web application development frameworks, but they are significantly different in terms of architecture, features, and the technologies they are based on. 
-Here are the key differences between Angular and AngularJS:
-
-1. Architecture:
-
-   **Angular** (commonly referred to as "Angular 2+" or just "Angular") is a complete rewrite of AngularJS. 
-   It uses a component-based architecture, where an application is built by composing reusable components. 
-   Components are the core building blocks, and they encapsulate the HTML, CSS, and behavior of a part of the user interface.
- 
-   **AngularJS** (commonly referred to as "Angular 1") uses a controller-based architecture. 
-   It relies on controllers and directives to define the structure and behavior of an application.
-
-2. Language:
-
-   **Angular** is primarily written in TypeScript, a statically typed superset of JavaScript. 
-   TypeScript provides strong typing, improved tooling, and helps catch errors at compile time.
-
-   **AngularJS** uses JavaScript for development, without the benefit of TypeScript's static typing.
-
-3. Performance:
-
-   **Angular** is known for its improved performance compared to AngularJS. 
-   It uses a virtual DOM and offers better change detection mechanisms, making updates to the UI more efficient.
-
-   **AngularJS**'s two-way data binding could sometimes lead to performance issues, especially in complex applications, as it had to watch for changes in the entire scope.
-
-## Basic
-
-### Data Binding
-
-![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/src/assets/images/data-binding.jpg)
-
-**String Interpolation**: It is used to just display a piece of data in HTML, such as displaying a title or a name.
-
-**Property Binding**: It binds a property of a DOM object, for example the hidden, innertext, setAttribute, replaceChild property (etc.), to some data value.
-
-**Event Binding**: It listens for and responds to user actions such as keystrokes, mouse movements, clicks, and touches.
-
-**Two-Way Binding**: It listens for events and update values simultaneously between parent and child components.
-
-### Directives
-
-![alt text](https://github.com/adrian95c/learn-angular-BF0904/blob/main/src/assets/images/directives.jpg)
