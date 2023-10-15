@@ -1,1 +1,21 @@
-<app-recipe-item></app-recipe-item>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="" class="list-group list-group-item clearfix" *ngFor="let recipe of recipes">
+            <div class="float-start ms-2 me-auto recipe-info">
+                <h5 class="list-group-item-heading">{{ recipe.name }}</h5>
+                <p class="list-group-item-text">{{ recipe.description }}</p>
+            </div>
+            <span class="float-end ms-2 me-auto">
+                <!-- Either use string interpolation or property binding -->
+                <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive">
+            </span>
+        </a>
+        <app-recipe-item></app-recipe-item>
+    </div>
+</div>
