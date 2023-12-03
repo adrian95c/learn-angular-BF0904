@@ -6,8 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent implements OnInit {
-  @Input() element!: {type: string, name: string, content: string}; 
+  @Input('srvElement') element!: {type: string, name: string, content: string}; 
   // @Input() is to expose your variable globally, instead only internal usage
+  // using alias on property 'element', act as the name of the DOM property to which the input property is bound. 'element' -> 'srvElement'
   // Typescript 2.7.2 included a strict class checking where all properties should be declared in constructor, (!) exclamation mark for workaround
 
   constructor() {}
