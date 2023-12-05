@@ -1,5 +1,9 @@
 <div class="container">
-  <app-cockpit></app-cockpit>
+  <app-cockpit 
+  (serverCreated)="onServerAdded($event)" 
+  (bluePrintCreated)="onBluePrintAdded($event)" 
+  ></app-cockpit>
+  <!-- $event here is to expect some event data passing into respective method-->
   <hr>
   <div class="row">
     <div class="col-xs-12">
@@ -8,4 +12,11 @@
       [srvElement]="serverElement"></app-server-element>
     </div>
   </div>
+
+  <!--
+    Overall data flow:
+    1. Any input in app-cockpit, it will trigger serverCreated/ bluePrintCreated method, corresponding to onServerAdded/ onBluePrintAdded in app component
+    2. Data prompted in input fields of app-cockpit will be captured, emitted and @Output to $event to catch those data (of course you need to have respective variable to hold)
+    3. These data will eventually pushed into serverElements array, then render out by ngFor loop
+  -->
 </div>
