@@ -6,7 +6,9 @@
       <input type="text" class="form-control" 
        #serverNameInput> <!--This is an example of using local reference to pass in as parameter (html element) , but remember, this only usable within template itself. -->
       <label>Server Content</label>
-      <input type="text" class="form-control" [(ngModel)]="newServerContent">
+      <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent"> -->
+      <input type="text" class="form-control" 
+      #serverContentInput>
       <br>
       <button
         class="btn btn-primary"
