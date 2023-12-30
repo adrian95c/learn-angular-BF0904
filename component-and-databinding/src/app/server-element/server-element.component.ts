@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, ViewEncapsulation, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -6,13 +6,48 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./server-element.component.css'],
   //encapsulation: ViewEncapsulation.ShadowDom//.Emulated//.None
 })
-export class ServerElementComponent implements OnInit {
+export class ServerElementComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   @Input('srvElement') element!: {type: string, name: string, content: string}; 
   // @Input() is to expose your variable globally, instead only internal usage
   // using alias on property 'element', act as the name of the DOM property to which the input property is bound. 'element' -> 'srvElement'
   // Typescript 2.7.2 included a strict class checking where all properties should be declared in constructor, (!) exclamation mark for workaround
+  @Input() name!: string;
 
-  constructor() {}
+  constructor() {
+    console.log('constructor called!');
+  }
 
-  ngOnInit(){}
+  ngOnChanges(changes: SimpleChanges){
+    console.log('ngOnChanges called!');
+    console.log(changes);
+  }
+
+  ngOnInit(){
+    console.log('ngOnInit called!')
+  }
+
+  ngDoCheck(){
+    console.log('ngDoCheck called!');
+  }
+
+  ngAfterContentInit(){
+    console.log('ngAfterContentInit called!'); // refer to the content belong to app.component
+  }
+
+  ngAfterContentChecked(){
+    console.log('ngAfterContentChecked called!'); // Usually will be called after every check, like ngDoCheck
+  }
+
+  // Both will be called after content being check
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit called!');
+  }
+
+  ngAfterViewChecked(){
+    console.log('ngAfterViewChecked called!');
+  }
+
+  ngOnDestroy(){
+    console.log('ngOnDestroy called!');
+  }
 }
