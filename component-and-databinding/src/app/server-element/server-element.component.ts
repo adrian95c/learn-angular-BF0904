@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input, ViewEncapsulation, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, ViewEncapsulation, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -12,6 +12,7 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
   // using alias on property 'element', act as the name of the DOM property to which the input property is bound. 'element' -> 'srvElement'
   // Typescript 2.7.2 included a strict class checking where all properties should be declared in constructor, (!) exclamation mark for workaround
   @Input() name!: string;
+  @ViewChild('heading') header!: ElementRef;
 
   constructor() {
     console.log('constructor called!');
@@ -24,6 +25,7 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
 
   ngOnInit(){
     console.log('ngOnInit called!')
+    console.log('Text Content: ' + this.header.nativeElement.textContent); // This wont work because the DOM is yet initialise/ render, you wont have access/ use value/ content to template.
   }
 
   ngDoCheck(){
@@ -41,6 +43,7 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
   // Both will be called after content being check
   ngAfterViewInit(){
     console.log('ngAfterViewInit called!');
+    console.log('Text Content: ' + this.header.nativeElement.textContent);
   }
 
   ngAfterViewChecked(){
