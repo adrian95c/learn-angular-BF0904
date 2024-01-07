@@ -1,9 +1,12 @@
-import { Directive, OnInit, Renderer2, ElementRef, HostListener} from '@angular/core';
+import { Directive, OnInit, Renderer2, ElementRef, HostListener, HostBinding} from '@angular/core';
 
 @Directive({
   selector: '[appBetterHighlight]'
 })
 export class BetterHighlightDirective implements OnInit{
+
+  // Easier way compare with @HostListener in this scenario, Renderer and HostListnener are totally fine
+  @HostBinding('style.backgroundColor') backgroundColor: string = 'Transparent';
 
   constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
@@ -14,10 +17,12 @@ export class BetterHighlightDirective implements OnInit{
 
   // HostListener is a decorator to declares a DOM event to listen for and provides a handler method to run when that event occurs.
   @HostListener('mouseenter') mouseover(eventData: Event) {
-    this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'LightPink');  
+    //this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'LightPink');
+    this.backgroundColor = 'LightYellow';  
   }
 
   @HostListener('mouseleave') mouseleave(eventData: Event) {
-    this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'Transparent');
+    //this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'Transparent');
+    this.backgroundColor = 'Transparent';  
   }
 }
