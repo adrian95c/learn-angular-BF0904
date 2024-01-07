@@ -35,7 +35,11 @@
       <br>
       <p appBasicHighlight>Style me with a basic directive!</p>
       <br>
-      <p appBetterHighlight>Style me with a better directive!</p>
+      <p appBetterHighlight [defaultColor]="'Aqua'" [highlightColor]="'LightSteelBlue'">Style me with a better directive!</p>  
+      <!--
+        * You may do this way, if you are clear enough to differentiate between attribute binding & property binding
+        <p appBetterHighlight defaultColor='Aqua' highlightColor='LightSteelBlue'>Style me with a better directive!</p>
+      -->
     </div>
   </div>
 </div>
