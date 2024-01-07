@@ -21,6 +21,22 @@
           {{ even }}
           </li>  
         </div>
+        <!--
+          // The reasons behind the asterisk star in structural directive are:
+          // - To simplify the usage of template as shown at below
+          // - To indicates that a structural directive instead of a normal attribute directive or property binding          
+          // Basically both implementation are no different, [ngIf] nor *ngIf
+        <ng-template [ngIf]="!onlyOdd">
+          <div>
+            <li class="list-group-item"
+            [ngClass]="{odd: even % 2 !== 0}"
+            [ngStyle]="{backgroundColor: even % 2 == 0 ? 'LightGreen' : 'transparent'}"
+            *ngFor="let even of evenNumbers">
+            {{ even }}
+            </li>  
+          </div>  
+        </ng-template>
+        -->
 
         <!--
           * Two structural directives disallow to combine into same element
